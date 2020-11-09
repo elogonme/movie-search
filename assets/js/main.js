@@ -50,7 +50,7 @@ $(document).ready(function(){
         for (var property in data){
             var $tr = $('<tr>');
             var $th = $('<th>');
-            var $td = $('<td>');
+            var $td = $('<td class="text-wrap">');
             $th.attr('scope', 'row');
             $th.text(property + ': ');
             $td.text(data[property])
