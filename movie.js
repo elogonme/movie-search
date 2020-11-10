@@ -1,10 +1,12 @@
 
 $(document).ready(() => {
+    var searchText = prompt('What movie to look for?')
+    getMovies(searchText);
+
     $('#searchForm').on('submit', (e) => {
+        e.preventDefault();
         let searchText = $('#searchText').val();
         getMovies(searchText);
-        e.preventDefault();
-
     });
 });
 
@@ -15,7 +17,11 @@ function getMovies(searchText){
         console.log(response);
         if (response.status === 200){
             console.log("success");
-        }  return response.json();
+            return response.json();
+        }  else {
+            console.log(response);
+        }
+
     }).then(function (data) {
 
 
