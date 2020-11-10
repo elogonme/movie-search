@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     // Function to search for movie - call API
     function getMovie(title){
-        var endpoint = `http://www.omdbapi.com/?t=${title}&apikey=fac8a5da`;
+        var endpoint = `https://www.omdbapi.com/?t=${title}&apikey=fac8a5da`;
         fetch(endpoint).then(function(response){
             $('#error').text('');
             if (response.ok) {
