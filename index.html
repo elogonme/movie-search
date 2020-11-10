@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Movie Search</title>
+  </head>
+
+  <body>
+    <main>
+        <div class="container">
+            <h1 class="text-center mt-2 mb-0"><span>
+                <img src="assets/img/film_reel.png" alt="Film reel" style="height: 80px">
+            </span> Open Movie Database Search</h1>
+                <!-- Error message displayed here -->
+                <div id="error" class="text-center"></div> 
+                <!-- Form to get movie title -->
+                <form class="form-inline d-flex justify-content-center">
+                    <div class="form-group mb-2">
+                    <div class="form-group mx-sm-3 mb-2">
+                    <label for="movie-name" class="mr-2">
+                        <img src="assets/img/movie_80px.png" alt="movie icon" style="height: 60px">
+                    </label>
+                    <input type="text" class="form-control" id="movie-name" placeholder="Movie Title">
+                    </div>
+                    <button type="submit" id="search" class="btn btn-outline-dark mb-2">
+                        <span>
+                            <img src="assets/img/search_26px.png" alt="Search Icon">
+                        </span> Search
+                    </button>
+                </form>
+        </div>
+        <!-- Movie card with info displayed here -->
+        <div id="movie-card" class="card text-wrap container">
+            <div class="row no-gutters">
+                <div class="col-md-2">
+                    <img id="poster" src="" class="card-img-top my-3 pr-3 mr-2" alt="Movie Poster">
+                    <h5 id="title" class="card-title"></h5>
+                    <div id="actors" scope="col" class="pr-2"></div>
+                </div>
+                <div class="card-body col-md-10">
+                    <p id="description"></p>
+                    <table class="table ">
+                        <!-- Movie info goes here -->
+                        <tbody id="movie-info"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
